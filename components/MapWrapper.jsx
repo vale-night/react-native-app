@@ -1,20 +1,30 @@
 import React from 'react';
-import MapView from "react-native-maps";
-import {StyleSheet} from "react-native";
+import MapView, {Marker} from "react-native-maps";
+import {StyleSheet, View, Text} from "react-native";
+import useLocation from '../hooks/useLocation';
 
 export const MapWrapper = () => {
+
+    const { location } = useLocation();
+
     return (
         <>
-            <MapView
-                style={styles.map}
-                loadingEnabled={true}
-                region={{
-                    latitude: 37.78825,
-                    longitude: -122.4324,
-                    latitudeDelta: 0.015,
-                    longitudeDelta: 0.0121,
-                }}
-            />
+            <Text>
+                {JSON.stringify(location)}
+            </Text>
+
+            {location && <MapView
+                    style={styles.map}
+                    initialRegion={{
+                        latitude: location.latitude,
+                        longitude: location.longitude,
+                        latitudeDelta: 0.004,
+                        longitudeDelta: 0.005,
+                    }}
+                >
+                <Marker coordinate={location}  />
+            </MapView>
+            }
         </>
 
     );
