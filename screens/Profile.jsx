@@ -1,10 +1,11 @@
 import React from 'react'
 import {Text, View} from "react-native";
+import Login from './Login';
 
 export const Profile = () => {
     return(
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Profile</Text>
+            <Login />
         </View>
     );
 }
