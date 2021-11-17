@@ -1,8 +1,26 @@
-import React from 'react'
-import { Text, View, StyleSheet,TextInput, KeyboardAvoidingView, TouchableOpacity } from "react-native";
+import React, { useState } from 'react'
+import { Text, View, StyleSheet,TextInput, KeyboardAvoidingView, TouchableOpacity, ToastAndroid, Alert } from "react-native";
 import AppStyles from '../constants/AppStyles';
+import { login } from '../services/auth.service';
 
 export const Login = () => {
+    const [username, setUsername] = useState();
+    const [password, setPassword] = useState();
+
+
+    const onLoginPress = () => {
+        login(username, password).then((result) => {
+            console.log(result.auth);
+            if(!result.auth)
+                throw 'Não foi possível autenticar';
+            ToastAndroid.showWithGravity('Autenticado com sucesso', 500, ToastAndroid.CENTER);
+
+        }).catch(error => {
+            ToastAndroid.showWithGravity(`Ocorreu um erro: ${error}`, 500, ToastAndroid.CENTER);
+            console.error(error)
+        });
+    }
+
     return (
         <View style={styles.container}>
             <Text style={styles.heading}>Login</Text>
@@ -13,6 +31,7 @@ export const Login = () => {
                     placeholderTextColor={AppStyles.primaryColor}
                     textContentType='emailAddress'
                     underlineColor='transparent'
+                    onChangeText={(text) => setUsername(text)}
                  />
                 <TextInput
                     placeholder='Senha'
@@ -21,6 +40,7 @@ export const Login = () => {
                     placeholderTextColor={AppStyles.primaryColor}
                     textContentType='password'
                     underlineColor='transparent'
+                    onChangeText={(text) => setPassword(text)}
                  />
             </View>
             <View style={styles.buttons}>
@@ -32,6 +52,7 @@ export const Login = () => {
                 <Text>OU</Text>
                 <TouchableOpacity
                     style={{...styles.button, backgroundColor: AppStyles.primaryColor}}
+                    onPress={onLoginPress}
                 >
                     <Text style={styles.buttonText}>Entrar</Text>
                 </TouchableOpacity>
