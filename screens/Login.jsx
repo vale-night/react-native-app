@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Text, View, StyleSheet,TextInput, KeyboardAvoidingView, TouchableOpacity, ToastAndroid, Alert } from "react-native";
+import PasswordInput from '../components/forms/PasswordInput';
 import StyledButton from '../components/StyledButton';
 import AppDefaultStyles from '../constants/AppDefaultStyles';
 import { login } from '../services/auth.service';
@@ -33,15 +34,9 @@ export const Login = ({navigation}) => {
                     underlineColor='transparent'
                     onChangeText={(text) => setUsername(text)}
                  />
-                <TextInput
-                    placeholder='Senha'
-                    secureTextEntry={true}
-                    style={AppDefaultStyles.input}
-                    placeholderTextColor={AppDefaultStyles.primaryColor}
-                    textContentType='password'
-                    underlineColor='transparent'
+                <PasswordInput 
                     onChangeText={(text) => setPassword(text)}
-                 />
+                />
             </View>
             <View style={styles.buttons}>
                 <StyledButton
