@@ -1,5 +1,6 @@
 import * as axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {Buffer} from 'buffer';
 
 import { APP_NAME, BASE_SERVICES_URL } from "../constants/endpoints";
 
@@ -25,6 +26,13 @@ export const login = async (username, password) => {
     }
 }
 
+export const logout = async () => {
+    console.log('Deslogando');
+    await AsyncStorage.removeItem(ACCESS_TOKEN_KEY);
+    console.log(await getAccessToken());
+    return true;
+}
+
 export const getAccessToken = async () => {
     return await AsyncStorage.getItem(ACCESS_TOKEN_KEY);
 }
@@ -37,6 +45,7 @@ export const isUserAuthenticated = async () => {
     console.log(userData);
     return true;
 }
+
 
 
 const decodeToken = (token) => {
