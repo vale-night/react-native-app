@@ -13,6 +13,7 @@ import { LogBox } from "react-native";
 import { Register } from '../screens/Register/Register';
 import RegisterClient from '../screens/Register/RegisterClient/RegisterClient';
 import RegisterOrganizer from '../screens/Register/RegisterOrganizer/RegisterOrganizer';
+import Login from '../screens/Login';
 
 
 /**
@@ -52,6 +53,7 @@ const ProfileStack = createNativeStackNavigator();
 const ProfileScreen = () => {
     return (
         <ProfileStack.Navigator>
+            <ProfileStack.Screen name="_Login" component={Login} options={{ headerShown: false }} />
             <ProfileStack.Screen name="_Profile" component={Profile} options={{ headerShown: false }} />
             <ProfileStack.Screen name="_Register" component={Register} options={{ headerShown: false }} />
             <ProfileStack.Screen name="_RegisterClient" component={RegisterClient} options={{ headerShown: false }} />

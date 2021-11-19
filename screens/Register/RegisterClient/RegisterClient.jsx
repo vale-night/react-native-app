@@ -5,7 +5,7 @@ import StyledButton from "../../../components/StyledButton";
 import AppDefaultStyles from "../../../constants/AppDefaultStyles";
 import { saveUser } from "../../../services/user.service";
 
-const RegisterClient = () => {
+const RegisterClient = ({navigation}) => {
 
     const [name, setName] = useState();
     const [email, setEmail] = useState();
@@ -26,10 +26,11 @@ const RegisterClient = () => {
             .then(result => {
                 if(!result.success)
                     throw 'Usuário não pode ser salvo com sucesso';
-                ToastAndroid.showWithGravity('Autenticado com sucesso', 500, ToastAndroid.CENTER);
+                ToastAndroid.showWithGravity('Usuário criado com sucesso! Você pode efetuar o login agora', 700, ToastAndroid.CENTER);
+                navigation.navigate('_Login')
             })
             .catch(error => {
-                ToastAndroid.showWithGravity(`Ocorreu um erro: ${error}`, 500, ToastAndroid.CENTER);
+                ToastAndroid.showWithGravity(`Ocorreu um erro: ${error}`, 700, ToastAndroid.CENTER);
                 console.error(error)
             });
     }
