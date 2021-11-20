@@ -7,7 +7,7 @@ import Settings from "../screens/Settings";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import logo from '../assets/logo.png';
-import Profile from "../screens/Profile";
+import ProfileMain from "../screens/Profile/ProfileMain";
 import Search from "../screens/Search";
 import { LogBox } from "react-native";
 import { Register } from '../screens/Register/Register';
@@ -53,8 +53,8 @@ const ProfileStack = createNativeStackNavigator();
 const ProfileScreen = () => {
     return (
         <ProfileStack.Navigator>
+            <ProfileStack.Screen name="_Profile" component={ProfileMain} options={{ headerShown: false }} />
             <ProfileStack.Screen name="_Login" component={Login} options={{ headerShown: false }} />
-            <ProfileStack.Screen name="_Profile" component={Profile} options={{ headerShown: false }} />
             <ProfileStack.Screen name="_Register" component={Register} options={{ headerShown: false }} />
             <ProfileStack.Screen name="_RegisterClient" component={RegisterClient} options={{ headerShown: false }} />
             <ProfileStack.Screen name="_RegisterOrganizer" component={RegisterOrganizer} options={{ headerShown: false }} />

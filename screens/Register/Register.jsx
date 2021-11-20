@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text,  View } from "react-native";
+import { StyleSheet, Text,  ToastAndroid,  View } from "react-native";
 import StyledButton from '../../components/StyledButton';
 import AppDefaultStyles from '../../constants/AppDefaultStyles';
 
@@ -9,8 +9,10 @@ export const Register = ({navigation}) => {
             <Text style={AppDefaultStyles.heading}>Você deseja se cadastrar...</Text>
             <View style={styles.buttons}>
                 <StyledButton
-                    buttonText='Como Promotor'
-                    onPress={() => navigation.navigate('_RegisterOrganizer')}
+                    buttonText='Como Organizador (em breve)'
+                    style={AppDefaultStyles.secondaryButton}
+                    // onPress={() => navigation.navigate('_RegisterOrganizer')}
+                    onPress={() => ToastAndroid.showWithGravity('Em breve, cadastro de organizadores!', 700, ToastAndroid.CENTER)}
                 />
                 <Text>OU</Text>
                 <StyledButton

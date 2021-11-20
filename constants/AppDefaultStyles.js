@@ -1,5 +1,6 @@
 const primaryColor = '#9C3687';
 const secondaryColor = '#A19BA0';
+const textColor = '#515c6f';
 
 const buttonStyles = {
     height: 59,
@@ -12,6 +13,7 @@ const buttonStyles = {
 const AppDefaultStyles = {
     primaryColor: primaryColor,
     secondaryColor: secondaryColor,
+    textColor: textColor,
     container: {
         flex: 1, 
         flexDirection: 'column',

@@ -1,6 +1,6 @@
 import * as axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {Buffer} from 'buffer';
+import jwt_decode from 'jwt-decode';
 
 import { APP_NAME, BASE_SERVICES_URL } from "../constants/endpoints";
 
@@ -41,18 +41,10 @@ export const isUserAuthenticated = async () => {
     const accessToken = await getAccessToken();
     if(!accessToken)
         return false;
-    const userData = decodeToken(accessToken);
-    console.log(userData);
+
+    const tokenData = jwt_decode(accessToken);
+    if (Date.now() >= tokenData.exp * 1000) {
+        return false;
+    }
     return true;
-}
-
-
-
-const decodeToken = (token) => {
-    const base64Url = token.split('.')[1];
-    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    const buff = Buffer.from(base64, 'base64');
-    const payloadinit = buff.toString('ascii');
-    const payload = JSON.parse(payloadinit);
-    return payload;
 }
