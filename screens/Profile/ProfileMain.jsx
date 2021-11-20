@@ -14,7 +14,9 @@ export const ProfileMain = ({navigation}) => {
     const ComponentToRender = isAuthenticated ? UserProfile : Login
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            {<ComponentToRender />}
+            {<ComponentToRender
+                navigation={navigation}
+             />}
         </View>
     );
 }

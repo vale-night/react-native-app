@@ -1,5 +1,6 @@
 const primaryColor = '#9C3687';
 const secondaryColor = '#A19BA0';
+const darkerPrimaryColor = '#361C31';
 const textColor = '#515c6f';
 
 const buttonStyles = {
@@ -13,6 +14,7 @@ const buttonStyles = {
 const AppDefaultStyles = {
     primaryColor: primaryColor,
     secondaryColor: secondaryColor,
+    darkerPrimaryColor,
     textColor: textColor,
     container: {
         flex: 1, 
@@ -49,6 +51,12 @@ const AppDefaultStyles = {
     buttonText: {
         color: '#FFF',
         fontSize: 20
+    },
+    profilePicture: {
+        width: 115,
+        height: 115,
+        borderRadius: 100,
+        marginRight: 25
     }
 }
 

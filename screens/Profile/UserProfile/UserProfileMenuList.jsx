@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, FlatList, TouchableOpacity } from 'react-native
 import { FontAwesome } from '@expo/vector-icons'; 
 import AppDefaultStyles from '../../../constants/AppDefaultStyles';
 
-const UserProfileMenuList = ({menuItems}) => {
+const UserProfileMenuList = ({menuItems, parentStyles}) => {
 
     const renderMenuItem = ({item}) => {
         return (
@@ -18,7 +18,7 @@ const UserProfileMenuList = ({menuItems}) => {
     }
 
     return (
-        <View style={styles.container}>
+        <View style={{...styles.container, ...parentStyles}}>
             <FlatList 
                 data={menuItems}
                 renderItem={renderMenuItem}
@@ -31,8 +31,8 @@ const UserProfileMenuList = ({menuItems}) => {
 const styles = StyleSheet.create({
     container: {
         width: 335,
-        // height: 155,
-        flex: 1,
+        // maxHeight: 180,
+        // flex: 1,
         shadowColor: '#e7eaf0',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.8,

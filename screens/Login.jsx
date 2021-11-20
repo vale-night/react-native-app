@@ -12,9 +12,11 @@ export const Login = ({navigation}) => {
 
     const onLoginPress = () => {
         login(username, password).then((result) => {
+            console.log(result);
             if(!result.auth)
                 throw 'Não foi possível autenticar';
             ToastAndroid.showWithGravity('Autenticado com sucesso', 500, ToastAndroid.CENTER);
+            navigation.navigate('_Profile')//TODO - Navegar para a nova tela de perfil
 
         }).catch(error => {
             ToastAndroid.showWithGravity(`Ocorreu um erro: ${error}`, 500, ToastAndroid.CENTER);

@@ -14,6 +14,7 @@ import { Register } from '../screens/Register/Register';
 import RegisterClient from '../screens/Register/RegisterClient/RegisterClient';
 import RegisterOrganizer from '../screens/Register/RegisterOrganizer/RegisterOrganizer';
 import Login from '../screens/Login';
+import EditProfile from '../screens/Profile/EditProfile/EditProfile';
 
 
 /**
@@ -54,6 +55,7 @@ const ProfileScreen = () => {
     return (
         <ProfileStack.Navigator>
             <ProfileStack.Screen name="_Profile" component={ProfileMain} options={{ headerShown: false }} />
+            <ProfileStack.Screen name="_EditProfile" component={EditProfile} options={{ headerShown: false }} />
             <ProfileStack.Screen name="_Login" component={Login} options={{ headerShown: false }} />
             <ProfileStack.Screen name="_Register" component={Register} options={{ headerShown: false }} />
             <ProfileStack.Screen name="_RegisterClient" component={RegisterClient} options={{ headerShown: false }} />

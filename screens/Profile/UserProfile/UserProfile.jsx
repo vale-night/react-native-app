@@ -5,7 +5,7 @@ import { logout } from '../../../services/auth.service';
 import UserProfileInfo from './UserProfileInfo';
 import UserProfileMenuList from './UserProfileMenuList';
 
-const UserProfile = () => {
+const UserProfile = ({navigation}) => {
 
     const showComingSoonMessage = () => ToastAndroid.showWithGravity('Em breve!', 700, ToastAndroid.CENTER);
 
@@ -48,22 +48,37 @@ const UserProfile = () => {
             text: 'Escreva uma sugestão',
             onPress: () => showComingSoonMessage()
         },
+        {
+            iconName: 'sign-out', 
+            text: 'Deslogar',
+            onPress: () => {
+                logout()
+                    .then(result => ToastAndroid.showWithGravity('Deslogado com sucesso!', 700, ToastAndroid.CENTER))
+                    .catch(err => ToastAndroid.showWithGravity(`Erro ao deslogar! ${err}`, 700, ToastAndroid.CENTER))
+            }
+        },
     ];
     return (
         <View style={AppDefaultStyles.container}>
-            <UserProfileInfo />
+            <UserProfileInfo
+                parentStyles={styles.item}
+                navigation={navigation} />
             <UserProfileMenuList 
                 menuItems={firstMenuItems}
+                parentStyles={styles.item}
             />
             <UserProfileMenuList 
                 menuItems={secondMenuItems}
+                parentStyles={styles.item}
             />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    
+    item: {
+        margin: 10
+    }
 });
 
 

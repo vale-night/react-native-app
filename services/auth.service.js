@@ -9,6 +9,7 @@ const ACCESS_TOKEN_KEY = `@${APP_NAME}:accessToken`;
 
 export const login = async (username, password) => {
     try {
+        console.log(AUTH_BASE_URL);
         const response = await axios.default.post(`${AUTH_BASE_URL}/login`, { username, password });
         const data = response.data;
         if(!data.auth)
@@ -47,4 +48,15 @@ export const isUserAuthenticated = async () => {
         return false;
     }
     return true;
+}
+
+export const getUserData = async () => {
+    const accessToken = await getAccessToken();
+    if(!accessToken)
+        return null;
+
+    const tokenData = jwt_decode(accessToken);
+    if (Date.now() >= tokenData.exp * 1000)
+        return null;
+    return tokenData;
 }
