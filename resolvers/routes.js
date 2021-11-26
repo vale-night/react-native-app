@@ -22,7 +22,7 @@ const HomeStack = createNativeStackNavigator();
 const HomeScreen = () => {
     return (
         <HomeStack.Navigator>
-            <HomeStack.Screen name="_Home" component={Home} options={{ headerShown: false }} />
+            <HomeStack.Screen name="_Home" component={Home} options={{ headerShown: false, contentStyle: {"background-color": '#fff'} }} />
         </HomeStack.Navigator>
     );
 };
@@ -31,7 +31,7 @@ const SettingsStack = createNativeStackNavigator();
 const SettingsScreen = () => {
     return (
         <SettingsStack.Navigator>
-            <SettingsStack.Screen name="_Settings" component={Settings} options={{ headerShown: false }} />
+            <SettingsStack.Screen name="_Settings" component={Settings} options={{ headerShown: false, contentStyle: {"background-color": '#fff'} }} />
         </SettingsStack.Navigator>
     );
 };
@@ -40,7 +40,7 @@ const SearchStack = createNativeStackNavigator();
 const SearchScreen = () => {
     return(
         <SearchStack.Navigator>
-            <SearchStack.Screen name="_Search" component={Search} options={{ headerShown: false }} />
+            <SearchStack.Screen name="_Search" component={Search} options={{ headerShown: false, contentStyle: {"background-color": '#fff'} }} />
         </SearchStack.Navigator>
     );
 }
@@ -49,7 +49,7 @@ const ProfileStack = createNativeStackNavigator();
 const ProfileScreen = () => {
     return (
         <ProfileStack.Navigator>
-            <ProfileStack.Screen name="_Profile" component={Profile} options={{ headerShown: false }} />
+            <ProfileStack.Screen name="_Profile" component={Profile} options={{ headerShown: false, contentStyle: {"background-color": '#fff'} }} />
         </ProfileStack.Navigator>
     );
 }

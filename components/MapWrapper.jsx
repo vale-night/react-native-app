@@ -9,10 +9,6 @@ export const MapWrapper = () => {
 
     return (
         <>
-            <Text>
-                {JSON.stringify(location)}
-            </Text>
-
             {location && <MapView
                     style={styles.map}
                     initialRegion={{
