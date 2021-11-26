@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcaf80dd-6eb9-48da-b17c-a18a3860e497" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/ChipField.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MapWrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MapWrapper.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolvers/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resolvers/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Search.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="fcaf80dd-6eb9-48da-b17c-a18a3860e497" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +100,7 @@
       <workItem from="1637846511273" duration="3412000" />
       <workItem from="1637879394774" duration="1948000" />
       <workItem from="1637887870973" duration="6863000" />
-      <workItem from="1637936756677" duration="9173000" />
+      <workItem from="1637936756677" duration="9556000" />
     </task>
     <servers />
   </component>
