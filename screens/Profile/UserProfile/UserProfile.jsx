@@ -53,7 +53,12 @@ const UserProfile = ({navigation}) => {
             text: 'Deslogar',
             onPress: () => {
                 logout()
-                    .then(result => ToastAndroid.showWithGravity('Deslogado com sucesso!', 700, ToastAndroid.CENTER))
+                    .then(result => {
+                        ToastAndroid.showWithGravity('Deslogado com sucesso!', 700, ToastAndroid.CENTER);
+                        navigation.navigate('_Login', {
+                            isAuthenticated: false
+                        })
+                    })
                     .catch(err => ToastAndroid.showWithGravity(`Erro ao deslogar! ${err}`, 700, ToastAndroid.CENTER))
             }
         },

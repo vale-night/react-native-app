@@ -4,8 +4,9 @@ import { isUserAuthenticated, logout } from '../../services/auth.service';
 import Login from '../Login';
 import UserProfile from './UserProfile/UserProfile';
 
-export const ProfileMain = ({navigation}) => {
-    const [isAuthenticated, setIsAuthenticated] = useState();
+export const ProfileMain = ({route, navigation}) => {
+    const params = route.params
+    const [isAuthenticated, setIsAuthenticated] = useState(params?.isAuthenticated);
 
     isUserAuthenticated().then(result => {
         setIsAuthenticated(result);

@@ -2,7 +2,7 @@ import { BASE_SERVICES_URL } from "../constants/endpoints";
 import * as axios from 'axios';
 import { getAccessToken } from "./auth.service";
 
-const USER_BASE_URL = `${BASE_SERVICES_URL}:3000/users`;
+const USER_BASE_URL = `${BASE_SERVICES_URL}/users`;
 
 
 export const saveUser = async (user) => {

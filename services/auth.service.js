@@ -4,12 +4,12 @@ import jwt_decode from 'jwt-decode';
 
 import { APP_NAME, BASE_SERVICES_URL } from "../constants/endpoints";
 
-const AUTH_BASE_URL = `${BASE_SERVICES_URL}:3500/auth`;
+const AUTH_BASE_URL = `${BASE_SERVICES_URL}/auth`;
 const ACCESS_TOKEN_KEY = `@${APP_NAME}:accessToken`;
 
 export const login = async (username, password) => {
     try {
-        console.log(AUTH_BASE_URL);
+        console.log(`${AUTH_BASE_URL}/login`);
         const response = await axios.default.post(`${AUTH_BASE_URL}/login`, { username, password });
         const data = response.data;
         if(!data.auth)
