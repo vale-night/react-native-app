@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcaf80dd-6eb9-48da-b17c-a18a3860e497" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/MapWrapper.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resolvers/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Search.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Settings.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ChipField.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MapWrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MapWrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resolvers/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resolvers/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Search.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,10 +47,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/screens" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v14.18.1/bin/node" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -60,6 +58,8 @@
       <recent name="$PROJECT_DIR$/screens" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/components/Rating" />
       <recent name="$PROJECT_DIR$/resolvers" />
     </key>
   </component>
@@ -98,7 +98,18 @@
       <option name="presentableId" value="Default" />
       <updated>1636593186106</updated>
       <workItem from="1636593654762" duration="158000" />
-      <workItem from="1636593875699" duration="10519000" />
+      <workItem from="1636593875699" duration="12720000" />
+      <workItem from="1636669648588" duration="1335000" />
+      <workItem from="1636681275010" duration="5023000" />
+      <workItem from="1636742207324" duration="1684000" />
+      <workItem from="1636754399515" duration="9903000" />
+      <workItem from="1636919857019" duration="35000" />
+      <workItem from="1637707264668" duration="10963000" />
+      <workItem from="1637810092855" duration="1906000" />
+      <workItem from="1637846511273" duration="3412000" />
+      <workItem from="1637879394774" duration="1948000" />
+      <workItem from="1637887870973" duration="6863000" />
+      <workItem from="1637936756677" duration="9173000" />
     </task>
     <servers />
   </component>
